@@ -1,10 +1,10 @@
-# 🏦 Banking ETL Project
+# Banking ETL Project
 
 Hệ thống ETL (Extract, Transform, Load) tự động để thu thập, làm sạch và lưu trữ dữ liệu tỷ giá ngoại tệ từ các ngân hàng Việt Nam.
 
 ---
 
-## 📋 Mục Đích Dự Án
+## Mục Đích Dự Án
 
 Dự án này được thiết kế để:
 
@@ -15,7 +15,7 @@ Dự án này được thiết kế để:
 
 ---
 
-## 🏗️ Cấu Trúc Dự Án
+## Cấu Trúc Dự Án
 
 ```
 banking_etl_project/
@@ -48,7 +48,7 @@ banking_etl_project/
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
+## Công Nghệ Sử Dụng
 
 ### Backend & Data Processing
 | Công Nghệ | Phiên Bản | Mục Đích |
@@ -79,16 +79,16 @@ banking_etl_project/
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy
+## Hướng Dẫn Cài Đặt & Chạy
 
-### 1️⃣ Yêu Cầu Hệ Thống
+### Yêu Cầu Hệ Thống
 
 - **Python**: 3.9 trở lên
 - **PostgreSQL**: 12 trở lên
 - **pip**: Package manager cho Python
 - **Anaconda** (tùy chọn): Môi trường quản lý Python
 
-### 2️⃣ Chuẩn Bị Database
+### Chuẩn Bị Database
 
 #### Bước 1: Kết nối tới PostgreSQL
 ```bash
@@ -108,7 +108,7 @@ psql -U postgres -d banking_dw -f database/2.sql
 psql -U postgres -d banking_dw -f database/3.sql
 ```
 
-### 3️⃣ Cài Đặt Python Dependencies
+### Cài Đặt Python Dependencies
 
 #### Phương pháp 1: Sử dụng Anaconda (Khuyến nghị)
 ```bash
@@ -127,7 +127,7 @@ pip install -r requirements.txt
 pip install sqlalchemy pandas requests apscheduler python-dotenv
 ```
 
-### 4️⃣ Cấu Hình Biến Môi Trường
+### Cấu Hình Biến Môi Trường
 
 Tạo file `.env` tại thư mục gốc dự án:
 ```env
@@ -139,7 +139,7 @@ DATABASE_URL=postgresql://postgres:password@127.0.0.1:5432/banking_dw
 - `127.0.0.1` → host PostgreSQL (mặc định localhost)
 - `5432` → port PostgreSQL (mặc định 5432)
 
-### 5️⃣ Chạy Dự Án
+### Chạy Dự Án
 
 #### Cách 1: Chạy Pipeline Một Lần (Manual)
 ```bash
@@ -163,7 +163,7 @@ python scheduler.py
 
 ---
 
-## 📊 Luồng Công Việc (Workflow)
+## Luồng Công Việc (Workflow)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -247,7 +247,7 @@ python scheduler.py
 
 ---
 
-## 🗄️ Cấu Trúc Database
+## Cấu Trúc Database
 
 ### Bảng 1: `dim_bank` (Dimension - Thông Tin Ngân Hàng)
 
@@ -293,7 +293,7 @@ id | bank_code | currency_code | currency_standard | buy_cash | buy_transfer | s
 
 ---
 
-## 📝 Chi Tiết Các Module
+## Chi Tiết Các Module
 ### 1. `main_etl.py` - Pipeline Chính
 **Hàm chính:** `run_pipeline()`
 **Công việc:**
@@ -452,7 +452,7 @@ class FactExchangeRate(Base):
 ```
 
 ---
-## 🧪 Testing & Debug
+## Testing & Debug
 ### Chạy Pipeline Thủ Công (Test)
 ```bash
 # Kích hoạt môi trường
@@ -503,13 +503,10 @@ WHERE bank_code = 'VCB'
 ---
 
 ## Visualization (Tableau)
-
 File `Book1.twb` là Tableau workbook chứa các dashboard:
 - Tỷ giá theo thời gian
 - So sánh giữa các ngân hàng
 - Biến động tiền tệ
-
-**Cách mở:** Double-click `Book1.twb` hoặc mở Tableau Desktop
 
 ---
 **Phiên bản:** 1.0
