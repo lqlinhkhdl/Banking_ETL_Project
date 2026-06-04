@@ -502,7 +502,7 @@ WHERE bank_code = 'VCB'
 
 ---
 
-## 📊 Visualization (Tableau)
+## Visualization (Tableau)
 
 File `Book1.twb` là Tableau workbook chứa các dashboard:
 - Tỷ giá theo thời gian
@@ -510,16 +510,6 @@ File `Book1.twb` là Tableau workbook chứa các dashboard:
 - Biến động tiền tệ
 
 **Cách mở:** Double-click `Book1.twb` hoặc mở Tableau Desktop
-
----
-## 📁 Tệp Quan Trọng
-| Tệp | Mục Đích | Quan Trọng |
-|-----|---------|-----------|
-| `.env` | Biến môi trường DATABASE_URL | ⭐⭐⭐ |
-| `main_etl.py` | Entry point pipeline | ⭐⭐⭐ |
-| `scheduler.py` | Lên lịch tự động | ⭐⭐ |
-| `db/models.py` | Schema database | ⭐⭐⭐ |
-| `database/*.sql` | Migration scripts | ⭐⭐ |
 
 ---
 **Phiên bản:** 1.0
